@@ -11,6 +11,7 @@ class StringFunctions {
       //input2 = input.charAt(0).toUpperCase() + input.slice(1);
       return input.toUpperCase(); 
     }
+
     /**
      * Returns a reversed string. Example: "abc" => "cba"
      * @param {string} input - the string input to be processed 
@@ -19,8 +20,15 @@ class StringFunctions {
      * reverse('abc') // 'cba'
      */
     reverse(input) { 
-      return input;
+      var splitString = input.split("");
+
+      var reverseTheString = splitString.reverse();
+
+      var combineString = reverseTheString.join("");
+
+      return combineString;
     }
+
     /**
      * Returns an array of the words in a string
      * @param {string} input - the string input to be processed
@@ -29,6 +37,10 @@ class StringFunctions {
      * words('hello world') // ['hello', 'world']
      */
     split(input) { 
-      return [input];
+
+      var input2 = input.replace(/[^A-Za-z0-9]+/g, " ");
+      var newArray = input2.trim().split(" ");
+
+      return newArray;
     }
 }
