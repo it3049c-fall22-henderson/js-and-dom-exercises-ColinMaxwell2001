@@ -26,7 +26,13 @@ class ArrayFunctions {
    */
   sum(arr) {
     // Hint: use the reduce method
-    return ;
+    let sum1 =0;
+
+    for (let i =0; i< arr.length; i++)
+    {
+      sum1 += arr[i];
+    }
+    return sum1;
   }
 
   /**
@@ -39,7 +45,9 @@ class ArrayFunctions {
    * filter([1,2,3,5,6,2,4,2], 2); // [1,3,5,6,4]
    */
   filterOut(arr, item) {
-    return ;
+    var arrayTest = [];
+    arrayTest = arr.filter(x => x !== item);
+    return arrayTest;
   }
 
   /**
